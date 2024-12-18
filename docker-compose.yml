@@ -1,0 +1,27 @@
+services:
+  frontend:
+    build:
+      context: ./frontend
+    restart: always
+    ports:
+      - "3001:80" # Maps port 3001 on the host to port 80 inside the container
+
+  backend:
+    build:
+      context: ./backend
+    restart: always
+    ports:
+      - "5000:5000" # Maps port 5000 on the host to port 5000 inside the container
+
+  db:
+    build:
+      context: ./db
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: mobileShop
+    ports:
+      - "27017:27017" # Maps port 27017 on the host to port 27017 inside the container
+    volumes:
+      - /mobileshop/db:/data/db # Mounts a local directory to persist database data

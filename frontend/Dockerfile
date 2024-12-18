@@ -1,20 +1,26 @@
-# Use the official Angular image
-FROM node:14-alpine
+# Stage 1: Build the React application
+FROM node:14-alpine as builder
 
-# Set the working directory in the container
+# Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json first
-COPY package*.json ./
+# Install build dependencies for Alpine
+RUN apk --update add libtool automake autoconf nasm gcc make g++ zlib-dev
+
+# Copy package.json and package-lock.json
+COPY package*.json  ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the Angular app code
+# Copy the source code
 COPY . .
 
-# Expose the port Angular runs on
-EXPOSE 4200
+# Build the React app for production
+RUN npm run build
 
-# Start the Angular app
-CMD ["ng", "serve", "--host", "0.0.0.0", "--port", "4200"]
+# Stage 2: Serve the built app using Nginx
+FROM nginx
+
+# Copy the build output from the builder stage to Nginx's web directory
+COPY --from=builder /app/public /user/share/nginx/html
