@@ -23,4 +23,4 @@ RUN npm run build
 FROM nginx
 
 # Copy the build output from the builder stage to Nginx's web directory
-COPY --from=builder /app/public /user/share/nginx/html
+COPY --from=builder /app/public /usr/share/nginx/html

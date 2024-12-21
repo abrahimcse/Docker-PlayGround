@@ -12,6 +12,8 @@ services:
     restart: always
     ports:
       - "5000:5000" # Maps port 5000 on the host to port 5000 inside the container
+    depends_on:
+      - db
 
   db:
     build:
@@ -24,4 +26,4 @@ services:
     ports:
       - "27017:27017" # Maps port 27017 on the host to port 27017 inside the container
     volumes:
-      - /mobileshop/db:/data/db # Mounts a local directory to persist database data
+      - /data/db:/data/db # Mounts a local directory to persist database data

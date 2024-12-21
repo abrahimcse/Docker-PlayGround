@@ -18,4 +18,4 @@ COPY . .
 
 # Start the app
 # CMD ["node", "index.js"]
-CMD rpm run start
+CMD npm run start
