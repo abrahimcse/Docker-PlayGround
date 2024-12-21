@@ -1,7 +1,7 @@
 #  Project: Mobile Shop
 
 This project consists of a frontend built with React, a backend built with Node.js (TypeScript), and a MongoDB database.
-!(Mobile Shop)[https://github.com/abrahimcse/Docker-PlayGround/blob/main/screenshots/mobile_shop.jpg]
+![Mobile Shop](https://github.com/abrahimcse/Docker-PlayGround/blob/main/screenshots/mobile_shop.jpg)
 ---
 
 ## Prerequisites
