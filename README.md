@@ -1,7 +1,8 @@
 #  Project: Mobile Shop
 
 This project consists of a frontend built with React, a backend built with Node.js (TypeScript), and a MongoDB database.
-![Mobile Shop](https://github.com/abrahimcse/Docker-PlayGround/blob/main/screenshots/mobile_shop.jpg)
+
+![](https://github.com/abrahimcse/Docker-PlayGround/blob/main/screenshots/mobile_shop.jpg)
 ---
 
 ## Prerequisites
@@ -19,10 +20,10 @@ To persist MongoDB data on your host machine:
 
 ```bash
 # Create a directory for MongoDB data(root_user)
-sudo mkdir -p /mobileshop/db
+mkdir -p /mobileshop/db
 
 # Grant read, write, and execute permissions(root_user)
-sudo chmod 777 -Rf /mobileshop/db
+chmod 777 -Rf /mobileshop/db
 ```
 
 ---
@@ -100,5 +101,7 @@ docker compose down
 This will also remove the containers but keep the persistent data in `/mobileshop/db`.
 
 ---
+
+
 
 Enjoy running the Mobile Shop project!
