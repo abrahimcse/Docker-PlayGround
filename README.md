@@ -64,7 +64,7 @@ To build and start all services (frontend, backend, and database):
 1. Navigate to the project root directory where the `docker-compose.yml` file is located:
 
    ```bash
-   cd /path/to/PlayGroundProject
+   cd /path/to/Docker-PlayGround
    ```
 
 2. Run the following command to build and start the services:
