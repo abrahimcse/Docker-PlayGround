@@ -1,6 +1,9 @@
 #  Project: Mobile Shop
 
-This project consists of a frontend built with React, a backend built with Node.js (TypeScript), and a MongoDB database.
+This project consists of a `Frontend` built with `React`, a `Backend` built with `Node.js`, and a `MongoDB database`.
+
+The `frontend` is served efficiently using `NGINX`, ensuring optimal performance and static file handling.
+
 
 ![](https://github.com/abrahimcse/Docker-PlayGround/blob/main/screenshots/mobile_shop.jpg)
 ---
@@ -61,7 +64,7 @@ To build and start all services (frontend, backend, and database):
 1. Navigate to the project root directory where the `docker-compose.yml` file is located:
 
    ```bash
-   cd /path/to/project/root
+   cd /path/to/PlayGroundProject
    ```
 
 2. Run the following command to build and start the services:
@@ -101,7 +104,5 @@ docker compose down
 This will also remove the containers but keep the persistent data in `/mobileshop/db`.
 
 ---
-
-
 
 Enjoy running the Mobile Shop project!
